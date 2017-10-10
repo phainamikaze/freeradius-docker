@@ -4,7 +4,7 @@ MAINTAINER Witsanu Booonmakam <phai.namikaze@gmail.com>
 WORKDIR /projects
 
 RUN apk update && apk upgrade && \
-    apk add --update freeradius freeradius-sqlite freeradius-radclient sqlite freeradius-rest && \
+    apk add --update freeradius freeradius-radclient freeradius-rest freeradius-python && \
     chgrp radius  /usr/sbin/radiusd && chmod g+rwx /usr/sbin/radiusd && \
     rm /var/cache/apk/*
 
